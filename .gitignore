@@ -1,0 +1,25 @@
+# Configuracion sensible
+app/conexion.php
+
+# Fotos subidas por usuarios
+uploads/mudanzas/*
+!uploads/mudanzas/.gitkeep
+
+# Backups de BD
+*.sql
+*.sql.gz
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Configuraciones de IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Archivos de test
+test_*.php
+*_test.php
