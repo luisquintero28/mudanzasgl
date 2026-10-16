@@ -524,16 +524,12 @@ if (!isset($_SESSION['usuario_id'])) {
     }
 
     /* MAPA */
-    .mapa-container {
-      background: var(--negro-card);
-      border: 1px solid var(--borde);
-      border-left: 3px solid var(--rojo);
-      margin-bottom: 2rem;
-      overflow: hidden;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+ .mapa-container {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
     .mapa-header {
       padding: 1.5rem 2rem;
       border-bottom: 1px solid var(--borde);
@@ -677,6 +673,147 @@ if (!isset($_SESSION['usuario_id'])) {
       border: 1px dashed var(--borde);
       border-radius: 3px;
     }
+
+    /* ============================================
+   RESPONSIVE - CELULARES
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* Header más compacto */
+    header {
+        padding: 1rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header-nombre {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    .header-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 0.75rem;
+    }
+
+    /* Nav scrolleable */
+    nav {
+        padding: 0 0.5rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        padding: 0.8rem 0.8rem;
+        font-size: 0.65rem;
+        white-space: nowrap;
+    }
+
+    /* Hero ajustado */
+    .hero {
+        padding: 3rem 1rem;
+        min-height: auto;
+    }
+
+    .hero-titulo {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-stats {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .stat-num {
+        font-size: 1.5rem;
+    }
+
+    /* Main padding reducido */
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    /* Cotización en 1 columna */
+    .cot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Servicios en 1 columna */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Servicios adicionales en 1 columna */
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Vehículos en 1 columna */
+    .vehiculos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contacto en 1 columna */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mapa más pequeño en celular */
+    #mapa-mudanzas {
+        height: 250px;
+    }
+
+    .mapa-container {
+        max-width: 100%;
+    }
+
+    .mapa-header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Modales más compactos */
+    .modal-fotos-content,
+    .modal-fotos > div > div {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+
+    /* Tablas scrolleables */
+    #lista-mis-mudanzas {
+        overflow-x: auto;
+        padding: 1rem !important;
+    }
+
+    #lista-mis-mudanzas table {
+        min-width: 600px;
+        font-size: 0.75rem;
+    }
+
+    /* Notificaciones */
+    #dropdown-notif {
+        width: calc(100vw - 2rem) !important;
+        right: -1rem !important;
+    }
+
+    /* Botones */
+    .btn-cotizar,
+    .btn-limpiar {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Títulos */
+    .seccion-titulo {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        margin-top: 2rem;
+    }
+}
   </style>
 </head>
 <body>
