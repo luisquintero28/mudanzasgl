@@ -270,6 +270,12 @@
         <label>Cédula de ciudadanía</label>
         <input type="number" name="cedula" id="cedula" placeholder="Número de documento" required>
     </div>
+
+    <div class="form-group">
+        <label>Correo electrónico (opcional)</label>
+        <input type="email" name="correo" id="correo" placeholder="Ej: gustavo@mail.com">
+    </div>
+
     <div class="form-group">
         <label>Contraseña</label>
         <input type="password" name="contrasena" id="password" placeholder="Mínimo 6 caracteres" required>
