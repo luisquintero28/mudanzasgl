@@ -18,15 +18,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Encriptar contrasena
+    $hash = password_hash($contrasena, PASSWORD_DEFAULT);
+
+    // Insertar usuario
     $sql = "INSERT INTO usuarios (cedula, nombre, correo, contrasena) 
-        VALUES (:cedula, :nombre, :correo, :contrasena)";
-$stmt = $conexion->prepare($sql);
-$stmt->execute([
-    ':cedula' => $cedula,
-    ':nombre' => $nombre,
-    ':correo' => $correo,
-    ':contrasena' => $hash
-]);
+            VALUES (:cedula, :nombre, :correo, :contrasena)";
+    $stmt = $conexion->prepare($sql);
+    $stmt->execute([
+        ':cedula' => $cedula,
+        ':nombre' => $nombre,
+        ':correo' => $correo,
+        ':contrasena' => $hash
+    ]);
 
     // Redirigir al login
     header("Location: ../public/loginGL.php");
