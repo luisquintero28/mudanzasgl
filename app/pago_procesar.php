@@ -57,12 +57,12 @@ try {
 
     $pago_id = $conexion->lastInsertId();
 
-    // 🔔 Notificar al admin
+    //  Notificar al admin
     require_once 'notificacion_crear.php';
     $montoFmt = number_format($monto, 0, ',', '.');
     crearNotificacionAdmin($conexion, "💳 Nuevo pago pendiente de $montoFmt COP por método " . strtoupper($metodo_pago));
 
-    // ✅ Respuesta de éxito (faltaba: el frontend espera data.ok)
+    //  Respuesta de éxito 
     echo json_encode([
         'ok'      => true,
         'mensaje' => 'Pago registrado correctamente',

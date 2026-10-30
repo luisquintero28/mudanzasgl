@@ -1,8 +1,8 @@
 <?php
-/**
- * Ayudante para crear notificaciones.
- * Uso: crearNotificacion($conexion, $usuario_id, "Mensaje aquí");
- */
+
+ // Ayudante para crear notificaciones.
+ // Uso: crearNotificacion($conexion, $usuario_id, "Mensaje aquí");
+
 function crearNotificacion($conexion, $usuario_id, $mensaje) {
     try {
         $stmt = $conexion->prepare(
@@ -20,9 +20,9 @@ function crearNotificacion($conexion, $usuario_id, $mensaje) {
     }
 }
 
-/**
- * Ayudante para crear notificación a TODOS los admins.
- */
+
+ // Ayudante para crear notificación a TODOS los admins.
+
 function crearNotificacionAdmin($conexion, $mensaje) {
     try {
         $stmt = $conexion->query("SELECT id FROM usuarios WHERE rol = 'admin'");

@@ -51,7 +51,7 @@ try {
         ':com' => $comentario
     ]);
 
-    // 🔔 Notificar al colaborador
+    //  Notificar al colaborador
     require_once 'notificacion_crear.php';
     $stmtColab = $conexion->prepare(
         "SELECT (SELECT id FROM usuarios WHERE cedula = c.cedula AND rol = 'colaborador' LIMIT 1) AS colab_usuario_id
