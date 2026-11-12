@@ -12,7 +12,7 @@ Sistema de información desarrollado en PHP + MySQL para gestionar todo el flujo
 - 💰 **Cotización** con API externa de ciudades de Colombia
 - 📅 **Agendamiento** de mudanzas con fecha, hora y direcciones
 - 💳 **Sistema de pagos** con 5 métodos (efectivo, transferencia, tarjeta, nequi, daviplata)
-- 💵 **Comisiones automáticas** (15% empresa / 85% colaborador)
+- 💵 **Comisiones automáticas** (3% empresa / 97% colaborador)
 - ⭐ **Calificaciones** con estrellas y ranking de colaboradores
 - 📸 **Galería de fotos** por mudanza (antes/durante/después)
 - 🔔 **Notificaciones** en tiempo real
